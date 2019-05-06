@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tela de Login</title>
+<style>
+    .quadro{
+        margin-top: 70px;
+        
+    }
+    .div{
+        background-color: rgba(239, 241, 198, 0.575);
+        width: 190px;
+        padding: 30px;
+        border: 1px;
+        border-radius: 10px;
+        
+    }
+    #login{
+        margin-bottom: 15px;
+    }
+    .botao{
+        background-color: rgba(255, 255, 255, 0.842);
+        color: rgb(0, 0, 0);
+        border-radius:20px;
+        border: 2px solid rgba(0, 0, 0, 0.192);
+        padding: 20px; 
+    }
+    html{
+    background: url(https://static.quizur.com/i/b/5af777de941210.253095795af777de8045d5.20287143.jpg) no-repeat center center fixed;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -webkit-background-size:cover;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    }
+    .letra{
+        color: white;
+    }
+    .letra2{
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #000;
+        font-size: 3em; color: #fffdd9;
+    }
+</style>
+</head>
+<body>
+    <center class="quadro">
+
+        <h1 class="letra2">Academia para heróis</h1>
+            <div class="div">
+                <form>
+                    <h3 class="letra"><span>Login:</span> <input type="text" id="usuario" placeholder="Login"></h3>
+<br>
+                    <h3 class="letra"><span>Senha:</span> <input type="password" id="senha" placeholder="Senha"></h3>
+<br><br>
+                        <button type="button" onclick="logar()" class="botao">Entrar</button>
+                </form>
+        </div>
+
+    </center>
+</body>
+</html>
+
+<script>
+    function logar(){
+        var user = usuario.value;
+        var pass = senha.value;
+
+        if (user == 'Deku chounem porcelana narutinho de cabelo verde' && pass == 'orumaito' ){
+            alert(`Bem-Vindo ${user}, PLUS ULTRA!!!!`);
+        }else{
+            alert(`NANIIIIII????????`);
+        }
+
+    }
+</script>

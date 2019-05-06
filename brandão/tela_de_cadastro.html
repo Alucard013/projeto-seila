@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tela de Cadastro</title>
+<style>
+    .center{
+        margin-top: 10px;
+            
+    }
+    .div{
+        background-color: rgba(0, 0, 0, 0.575);
+        /* width: 190px; */
+        padding: 10px;
+        border: 1px;
+        border-radius: 10px;
+        margin-left: 80px;
+        margin-right: 80px;
+            
+    }
+    #login{
+        margin-bottom: 15px;
+    }
+    .botao{
+        background-color: rgba(255, 255, 255, 0.842);
+        color: rgb(0, 0, 0);
+        border-radius:20px;
+        border: 2px solid rgba(0, 0, 0, 0.192);
+        padding: 15px; 
+    }
+    html{
+        background: url(https://ovicio.com.br/wp-content/uploads/boku-no-hero-academia-my-hero-academia.png) no-repeat center center fixed;
+        background-size: cover;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        -webkit-background-size:cover;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    }
+    .letra{
+        color: white;
+    }
+    .letra2{
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #000;
+        font-size: 3em; color: #fffdd9;
+    }
+    #imput{
+        border: 1px solid #000000;
+    background:#cccccc;
+    /* width:150px; */
+    height:30px;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    }
+</style>
+</head>
+<body>
+    <center class="center">
+
+        <h1 class="letra2">Cadastro para entrar na U.A </h1>
+            <div class="div">
+                <form>
+                    <h3 class="letra"><span>Nome:</span> <input type="text" placeholder="Nome" id="nome"></h3>
+
+                    <h3 class="letra"><span>Email:</span> <input type="email" placeholder="Email" id="email"></h3>
+
+                    <h3 class="letra"><span>Confirmar email:</span> <input type="email" placeholder="Confirmar email" id="conf"></h3>
+
+                    <h3 class="letra"><span>Data de Nascimento:</span> <input type="date" id="Imput"></h3>
+
+                    <h3 class="letra"><span>Peculiaridade</span> <input type="text" id="poder" placeholder="Peculiaridade"></h3>
+<br><br>
+                    <h3 class="letra"><span>Senha:</span> <input type="password" id="senha" placeholder="senha"></h3>
+                    <h3 class="letra"><span>Repetir a senha:</span> <input type="password" id="repeti" placeholder="repita sua senha"></h3>
+<br><br>
+                        <button type="button" onclick="cadastrar()" class="botao">Cadastrar</button>
+                </form>
+        </div>
+
+    </center>
+</body>
+</html>
+<script>
+function cadastrar(){
+    if(email.value != conf.value){
+        alert('Os emails devem ser iguais');
+    } if(senha.value != repeti.value){
+        alert('As senhas não coincidem');
+    }if (senha.value.length < 8) {
+            alert('A senha deve conter 8 ou mais caracteres')
+            senha.value = "";
+    }if (repeti.value.length < 8) {
+            senha.value = "";
+    }else {
+        alert(`Agora você ${nome.value} está cadastrado na U.A`)
+    }
+}
+</script>
